@@ -7,7 +7,7 @@
 |password|integer|null:false|
 
 ### Association
-has_many :articles
+- has_many :articles
 
 ## articlesテーブル
 |Column|Type|Options|
@@ -18,9 +18,9 @@ has_many :articles
 |user_id|integer|null:false|
 
 ### Association
-belongs_to :user
-has_many :articles_tags
-has_many :tags, through: :articles_tags
+- belongs_to :user
+- has_many :articles_tags
+- has_many :tags, through: :articles_tags
 
 ## articles_tagsテーブル
 |Column|Type|Options|
@@ -29,8 +29,8 @@ has_many :tags, through: :articles_tags
 |tags_id|integer|null:false|
 
 ### Association
-belongs_to :article
-belongs_to :tag
+- belongs_to :article
+- belongs_to :tag
 
 ## tagsテーブル
 |Column|Type|Options|
@@ -38,5 +38,5 @@ belongs_to :tag
 |name|string|null:false|
 
 ### Association
-has_many :articles_tags
-has_many :articles, through: :articles_tags
+- has_many :articles_tags
+- has_many :articles, through: :articles_tags
