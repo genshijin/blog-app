@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BlogApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>BlogApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
+<div id="loader-bg">
+<div class="ball-clip-rotate-multiple" id="loader">
+  <div></div>
+  <div></div>
+</div>
+</div>
+<div class="wrapper">
+  <header class="header" id="header">
+    <h1><a href="index.html">Site Title</a></h1>
+    <div class="menu-trigger" id="js__btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
     <%= yield %>
-  </body>
+  <footer id="footer">
+    <p>&copy; Site Title All Rights Reserved.</p>
+  </footer>
+</div>
+  <!-- モーダルメニュー -->
+<nav class="menu" id="js__nav">
+  <ul>
+    <li><a href="#">SingUp</a></li>
+    <li><a href="#">SignIn</a></li>
+  </ul>
+</nav>
+</body>
 </html>

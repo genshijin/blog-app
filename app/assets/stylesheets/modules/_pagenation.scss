@@ -1,0 +1,17 @@
+.pagenation {
+  text-align: center;
+
+  a {
+    padding: 0 .5em;
+    color: colors(blue2);
+
+    &:hover {
+      color: colors(blue1);
+    }
+  }
+
+  .page--number {
+    margin-top: 1em;
+    padding: 0 1em;
+  }
+}

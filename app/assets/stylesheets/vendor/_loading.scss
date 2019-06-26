@@ -1,0 +1,14 @@
+#loader-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: colors(orange1);
+  z-index: 1000;
+  .ball-clip-rotate-multiple{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+}

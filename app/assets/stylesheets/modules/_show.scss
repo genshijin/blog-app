@@ -1,0 +1,22 @@
+.article_wrapper{
+  margin: 0 auto 20px;
+  width: 100%;
+  max-width: 800px;
+  background: colors(gray2);
+  .thumbnail{
+    width: 800px;
+    height: 500px;
+    background: #000;
+  }
+  .article_body{
+    padding: 1em 2em;
+    h2{
+      font-size: 22px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 14px;
+      padding: .6em;
+    }
+  }
+}

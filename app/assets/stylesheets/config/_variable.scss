@@ -1,0 +1,13 @@
+$colors:(orange1: rgb(241, 120, 22),
+  orange2: rgb(255, 178, 59),
+  orange3: rgb(255, 191, 93),
+  blue1: rgb(22, 196, 253),
+  blue2: rgb(62, 126, 182),
+  blue3: rgb(10, 74, 130),
+  gray: rgb(74, 74, 74),
+  gray2: rgb(218, 218, 218),
+  white: rgb(255, 255, 255)
+);
+@function colors($key) {
+  @return map-get($colors, $key);
+}
