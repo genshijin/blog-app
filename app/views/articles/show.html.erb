@@ -4,13 +4,9 @@
         <img src="" alt="">
     </div>
     <article class="article_body">
-      <h2>Blog Title</h2>
-      <p>
-        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-        texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-      </p>
+      <h2><%= @articles.title %></h2>
+      <p class="created"><%= @articles.created_at.strftime('%Y.%m.%d') %></p>
+      <p class="content"><%= @articles.content %></p>
     </article>
   </div>
 </div>
