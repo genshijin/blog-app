@@ -1,0 +1,11 @@
+<div class="create--form">
+<%= form_with(model: @article, local: true) do |f| %>
+  <%= f.label :タイトル %>
+  <%= f.text_field :title, placeholder: 'タイトル', class: "textbox" %><br>
+  <%= f.label :本文 %>
+  <%= f.text_area :content, placeholder: '本文', class: "textbox", style: 'height: 400px;' %><br>
+  <%= f.label :画像 %>
+
+  <%= f.submit :投稿, class: "submit_btn" %>
+<% end %>
+</div>
