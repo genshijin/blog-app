@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 8)
   end
 
   def show
@@ -15,8 +15,8 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notice] = "投稿を作成しました"
-      redirect_to controller: :articles, action: :index
+      flash[:notice] = '投稿しました'
+      redirect_to root_path
     else
       render 'new'
     end
@@ -26,8 +26,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.user_id == current_user.id
       @article.destroy
-      flash[:notice] = "投稿を削除しました"
-      redirect_to controller: :articles, action: :index
+      flash[:notice] = '削除しました'
+      redirect_to root_path
     end
   end
 
@@ -39,8 +39,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.user_id == current_user.id
       @article.update(article_params)
-      flash[:notice] = "投稿を更新しました"
-      redirect_to controller: :articles, action: :index
+      flash[:notice] = '更新しました'
+      redirect_to root_path
     end
   end
 

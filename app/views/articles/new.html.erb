@@ -1,4 +1,5 @@
 <div class="create--form">
+<h2>記事作成</h2>
 <%= form_with scope: :article, url: articles_path, local: true do |f| %>
   <%= f.label :タイトル %><br>
     <%= f.text_field :title, placeholder: 'タイトル', class: :textbox %><br>
@@ -6,7 +7,7 @@
     <%= f.text_area :content, placeholder: '本文', class: :textbox, style: 'height: 400px;' %><br>
   <%= f.label :画像 %><br>
     <%= f.file_field :image, id: :article_img %><br>
-    <%= image_tag "", id: :img_prev %><br>
+    <%= image_tag 'no_image.gif', id: :img_prev %><br>
   <%= f.label :画像を削除する %>
     <%= f.check_box :remove_image %>
   <%= f.submit :投稿, class: :submit_btn %>

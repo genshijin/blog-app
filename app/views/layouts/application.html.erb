@@ -10,15 +10,9 @@
 </head>
 
 <body>
-<%= render 'layouts/flash' %>
-<%#
-<div id="loader-bg">
-  <div class="ball-clip-rotate-multiple" id="loader">
-    <div></div>
-    <div></div>
-  </div>
-</div>
-%>
+<%= render 'layouts/modal' %>
+<%= render 'layouts/loading' if current_page?(root_path) %>
+
 <div class="wrapper" id="wrapper">
   <header class="header" id="header">
     <h1><a href="/">Site Title</a></h1>
@@ -28,22 +22,11 @@
       <span></span>
     </div>
   </header>
+    <%= render 'layouts/flash' %>
     <%= yield %>
   <footer id="footer">
     <p>&copy; Site Title All Rights Reserved.</p>
   </footer>
 </div>
-  <!-- モーダルメニュー -->
-<nav class="menu" id="js__nav">
-  <ul>
-  <% if user_signed_in? %>
-    <li><%= link_to "記事作成", '/articles/new' %></li>
-    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-  <% else %>
-    <li><%= link_to "ログイン", new_user_session_path %></li>
-    <li><%= link_to "新規登録", new_user_registration_path %></li>
-  <% end %>
-  </ul>
-</nav>
 </body>
 </html>

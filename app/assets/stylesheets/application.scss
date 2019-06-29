@@ -1,5 +1,4 @@
 @import "./reset";
-@import "./flash";
 @import "./config/variable";
 @import "./mixin/viewport";
 @import "./vendor/loaders";
@@ -10,6 +9,7 @@
 @import "./modules/header";
 @import "./modules/footer";
 @import "./modules/index";
-@import "./modules/pagenation";
+@import "./modules/pagination";
 @import "./modules/article-form";
 @import "./modules/show";
+@import "./flash";

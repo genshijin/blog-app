@@ -3,8 +3,4 @@
     <%= render partial: "article", locals: { article: article } %>
   <% end %>
 </div>
-<div class="pagenation">
-  <a href="#">&lt;&lt;</a><a href="#">&lt; Back</a>
-  <span class="page--number">1</span>
-  <a href="#">Next &gt;</a><a href="#">&gt;&gt;</a>
-</div>
+  <%= will_paginate @articles %>

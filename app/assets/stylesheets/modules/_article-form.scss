@@ -1,12 +1,18 @@
 .create--form{
+  box-sizing: border-box;
   margin: 10px auto;
+  padding: 20px;
   border-radius: 6px;
   width: 100%;
   max-width: 800px;
   background: colors(orange1);
   color: colors(white);
+  h2{
+    font-size: 22px;
+    font-weight: bold;
+  }
   form{
-    padding: 16px;
+    padding: 15px 10px;
     margin: 0 auto;
     label{
       font-size: 16px;
@@ -16,7 +22,7 @@
     }
     .textbox{
       outline: 0;
-      width: 95%;
+      width: 98%;
       padding: 5px 8px;
       border-radius: 3px;
       border: 0;
@@ -52,6 +58,16 @@
         transition: .2s;
         transform: translateY(4px);
         box-shadow: colors(blue3) 0px 1px;
+      }
+    }
+  }
+  .form_menus{
+    padding-left: 10px;
+    a{
+      color: colors(white);
+      transition: .3s;
+      &:hover{
+        color: colors(blue2);
       }
     }
   }

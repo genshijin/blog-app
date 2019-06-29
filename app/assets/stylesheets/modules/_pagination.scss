@@ -1,0 +1,18 @@
+ul.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  li a {
+    display: block;
+    padding: 5px 13px;
+    margin: 0 6px;
+    border-radius: 50%;
+    color: colors(white);
+    background-color: colors(blue2);
+    transition: .3s;
+    &:hover {
+      background-color: colors(orange2);
+    }
+  }
+}

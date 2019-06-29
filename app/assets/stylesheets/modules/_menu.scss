@@ -7,9 +7,10 @@
   width: 100%;
   height: 100%;
   background: rgba(220, 100, 12, 1);
-  transition: all .5s;
   visibility: hidden;
   opacity: 0;
+  transition: all .2s;
+  z-index: 1000;
   ul {
     display: table-cell;
     vertical-align: middle;
@@ -38,16 +39,16 @@
 /* 開閉用ボタンがクリックされた時のスタイル */
 .open{
   .menu {
-    transition: all .5s;
+    transition: all .3s;
     visibility: visible;
     opacity: 1;
     li {
       opacity: 1;
       &:nth-child(1) {
-        transition: opacity 1s ease .5s;
+        transition: opacity 1s ease .3s;
       }
       &:nth-child(2) {
-        transition: opacity 1s ease .6s;
+        transition: opacity 1s ease .4s;
       }
     }
   }

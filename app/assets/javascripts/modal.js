@@ -14,3 +14,7 @@ $(document).on('turbolinks:load', function () {
     $btn.removeClass('active');
   });
 });
+
+$(function () {
+  setTimeout("$('.flash').fadeOut('slow')", 3000)
+})
