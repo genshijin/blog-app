@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('turbolinks:load', function () {
   var $body = $('body');
   var $btn = $('.menu-trigger');
 

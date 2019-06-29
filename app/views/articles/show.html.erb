@@ -1,7 +1,11 @@
 <div class="content">
   <div class="article_wrapper">
     <div class="thumbnail">
-        <img src="" alt="">
+      <% if @articles.image.resized.url.blank? %>
+        <p style="height"></p>
+      <% else%>
+        <%= image_tag @articles.image.resized.url %>
+      <% end %>
     </div>
     <article class="article_body">
       <h2><%= @articles.title %></h2>

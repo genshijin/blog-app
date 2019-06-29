@@ -1,11 +1,14 @@
 <div class="create--form">
-<%= form_with(model: @article, local: true) do |f| %>
+<%= form_with scope: :article, url: articles_path, local: true do |f| %>
   <%= f.label :タイトル %><br>
-  <%= f.text_field :title, placeholder: 'タイトル', class: :textbox %><br>
+    <%= f.text_field :title, placeholder: 'タイトル', class: :textbox %><br>
   <%= f.label :本文 %><br>
-  <%= f.text_area :content, placeholder: '本文', class: :textbox, style: 'height: 400px;' %><br>
+    <%= f.text_area :content, placeholder: '本文', class: :textbox, style: 'height: 400px;' %><br>
   <%= f.label :画像 %><br>
-  <%= f.file_field :image, id: :thumbnail %><br>
-  <%= f.submit :投稿, class: "submit_btn" %>
+    <%= f.file_field :image, id: :article_img %><br>
+    <%= image_tag "", id: :img_prev %><br>
+  <%= f.label :画像を削除する %>
+    <%= f.check_box :remove_image %>
+  <%= f.submit :投稿, class: :submit_btn %>
 <% end %>
 </div>

@@ -2,7 +2,7 @@
   margin: 10px auto;
   border-radius: 6px;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   background: colors(orange1);
   color: colors(white);
   form{
@@ -24,6 +24,9 @@
       border-left: 1px solid colors(gray);
       background-image: none;
       font-size: 12px;
+    }
+    #img_prev{
+      max-width: 100%;
     }
     .submit_btn{
       display: block;

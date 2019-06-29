@@ -1,11 +1,18 @@
 <div class="article--link">
-  <div class="eyecatch">
-    <img src="eyecatch.img" alt="">
-  </div>
-  <div class="article--option">
-    <a href="edit.html">編集</a>
-    <a href="delete.html">削除</a>
-  </div>
+  <% if article.image.resized.url.blank? %>
+    <div class="eyecatch">
+    </div>
+  <% else %>
+    <div class="eyecatch">
+      <%= image_tag article.image.resized.url %>
+    </div>
+  <% end %>
+  <% if user_signed_in? %>
+    <div class="article--option">
+      <%= link_to '編集', "/articles/#{article.id}/edit", method: :get %>
+      <%= link_to '削除', "/articles/#{article.id}", method: :delete %>
+    </div>
+  <% end  %>
   <%= link_to article_path(article.id), method: :get, class: "article--info" do %>
     <h2><%= article.title %></h2>
     <p class="created"><%= article.created_at.strftime('%Y.%m.%d') %></p>
